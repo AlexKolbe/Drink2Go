@@ -1,0 +1,24 @@
+//
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+
+.activities__link {
+  color: $base-color-3;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mobile {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.activities__item-title {
+  display: none;
+}

@@ -1,7 +1,15 @@
 /* GLOBAL */
-@import "./common/variables.scss";
-@import "./common/global.scss";
-@import "./common/fonts.scss";
+@import "./common/variables.scss"; //переменные
+@import "./common/mixins.scss"; // миксины
+@import "./common/global.scss"; // глобальные стили
+@import "./common/fonts.scss"; // шрифты
+@import "./common/visually-hidden.scss"; // скрытность
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/page.scss"; // для тянучки
+@import "./blocks/main.scss"; //основной блок
+@import "./blocks/button.scss"; //кнопки
+@import "./blocks/link.scss"; // ссылки
+@import "./blocks/header.scss"; // шапка сайта
+@import "./blocks/main-nav.scss"; // главное меню
+@import "./blocks/activites.scss"; // активность

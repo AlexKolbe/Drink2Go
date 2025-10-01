@@ -1,0 +1,14 @@
+//
+.link {
+  background-color: $background-color-transparent;
+  color: $base-color-3;
+
+  &:hover,
+  &:focus {
+    color: $base-color-1;
+  }
+
+  &:active {
+    background-color: $base-color-2;
+  }
+}

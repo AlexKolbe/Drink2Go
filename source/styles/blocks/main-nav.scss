@@ -1,0 +1,81 @@
+//
+
+.main-nav {
+  @include tablet {
+    margin: 0 auto;
+  }
+}
+
+.main-nav--closed {
+  @include mobile {
+    display: none;
+  }
+}
+
+.main-nav--opened {
+  @include mobile {
+    display: block;
+    top: 100%;
+    width: 100%;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+.main-nav__list {
+  @include list-base;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-transform: uppercase;
+  width: 100%;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.main-nav__activities {
+  @include list-base;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+
+.main-nav__toggle {
+  cursor: pointer;
+  border: none;
+  width: 60px;
+  height: 60px;
+  margin-right: -20px;
+}
+
+.main-nav--closed ~ .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 2px;
+  background-color: $base-color-3;
+  box-shadow:
+    0 5px 0 0 $base-color-3,
+    0 -6px 0 0 $base-color-3;
+}
+
+.main-nav--opened ~ .main-nav__toggle::before,
+.main-nav--opened ~ .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: $base-color-3;
+}
+
+.main-nav--opened ~ .main-nav__toggle::after {
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.main-nav--opened ~ .main-nav__toggle::before {
+  transform: translateX(-50%) rotate(-45deg);
+}

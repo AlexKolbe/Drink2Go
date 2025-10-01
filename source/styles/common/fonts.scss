@@ -1,1 +1,7 @@
 /* здесь подключите шрифты */
+@use "../common/mixins.scss";
+@include mixins.font-face("Montserrat", 400, normal, url("../../fonts/montserrat-400.woff2") format("woff2"), url("../../fonts/montserrat-400.woff") format("woff"));
+@include mixins.font-face("Montserrat", 500, normal, url("../../fonts/montserrat-500.woff2") format("woff2"), url("../../fonts/montserrat-500.woff") format("woff"));
+@include mixins.font-face("Montserrat", 600, normal, url("../../fonts/montserrat-600.woff2") format("woff2"), url("../../fonts/montserrat-600.woff") format("woff"));
+@include mixins.font-face("Montserrat", 700, normal, url("../../fonts/montserrat-700.woff2") format("woff2"), url("../../fonts/montserrat-700.woff") format("woff"));
+@include mixins.font-face("Montserrat", 800, normal, url("../../fonts/montserrat-800.woff2") format("woff2"), url("../../fonts/Montserrat-ExtraBold.woff") format("woff"));

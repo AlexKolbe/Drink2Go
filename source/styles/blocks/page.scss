@@ -1,0 +1,22 @@
+//
+.page {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.page__body {
+  @include font-info(14px, 20px);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $base-color-4;
+  color: $base-color-3;
+}
+
+.page__container {
+  max-width: $view-port-desktop;
+  margin: 0 auto;
+  padding: 0 20px;
+}

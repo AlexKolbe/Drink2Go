@@ -1,0 +1,49 @@
+//
+.button {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 8px 20px;
+  border: 0;
+}
+
+.button--primary {
+  background-color: $base-color-1;
+  color: $base-color-4;
+
+  &:hover,
+  &:focus {
+    background-color: $alternate-color-1;
+  }
+
+  &:active {
+    background-color: $alternate-color-2;
+  }
+
+  &:disabled {
+    background-color: $base-color-5;
+  }
+}
+
+.button--secondary {
+  background-color: $base-color-4;
+  color: $base-color-1;
+
+  &:hover,
+  &:focus {
+    background-color: $alternate-color-1;
+    color: $base-color-4;
+  }
+
+  &:active {
+    background-color: $alternate-color-2;
+    color: $base-color-4;
+  }
+
+  &:disabled {
+    background-color: $alternate-color-4;
+    color: $base-color-4;
+  }
+}

@@ -1,5 +1,38 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  background-color: $base-color-4;
+}
+
+.header__container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+
+.header__logo {
+  text-decoration: none;
+  cursor: pointer;
+
+  @include mobile {
+    margin-right: auto;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.header__logo-image {
+  display: block;
+}
+
+.header__title {
+  @include font-info(12px, 16px);
+  display: none;
+  margin: 0;
 }
