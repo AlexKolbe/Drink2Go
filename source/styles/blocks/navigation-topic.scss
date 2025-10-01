@@ -1,0 +1,31 @@
+//
+.navigation-topic {
+  padding-top: 6px;
+
+  @include mobile {
+    margin-bottom: 27px;
+  }
+}
+
+.navigation-topic__title {
+  @include font-info(14px, 20px, 700);
+  color: $base-color-1;
+
+  letter-spacing: 0.02em;
+  margin: 0;
+  margin-bottom: 2px;
+
+  @include mobile {
+    padding: 15px 0;
+  }
+}
+
+.navigation-topic__list {
+  @include list-base;
+  position: relative;
+  margin-bottom: 27px;
+}
+
+.navigation-topic__item {
+  margin-bottom: 16px;
+}

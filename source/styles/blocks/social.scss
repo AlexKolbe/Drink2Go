@@ -1,0 +1,31 @@
+//
+
+.social {
+  @include list-base;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 0 18px;
+  justify-content: flex-end;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 4px;
+  color: $base-color-5;
+
+  &:hover {
+    color: $base-color-1;
+    background-color: $base-color-2;
+  }
+
+  &:active {
+    color: $base-color-1;
+    background-color: $alternate-color-3;
+  }
+}

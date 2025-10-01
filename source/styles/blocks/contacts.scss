@@ -1,0 +1,32 @@
+//
+.contacts {
+  margin-bottom: 21px;
+}
+
+.contacts__link {
+  @include font-info(14px, 20px);
+  text-transform: none;
+  padding-top: 2px;
+  padding-left: 19px;
+  letter-spacing: 0;
+}
+
+.contacts__link--address::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 13px;
+  height: 16px;
+  background: url("../../icons/address-icon.svg") no-repeat center;
+}
+
+.contacts__link--telephone::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 13px;
+  height: 16px;
+  background: url("../../icons/phone-icon.svg") no-repeat center;
+}

@@ -10,6 +10,12 @@
 @import "./blocks/main.scss"; //основной блок
 @import "./blocks/button.scss"; //кнопки
 @import "./blocks/link.scss"; // ссылки
+//Шапка сайта
 @import "./blocks/header.scss"; // шапка сайта
 @import "./blocks/main-nav.scss"; // главное меню
 @import "./blocks/activites.scss"; // активность
+//Подвал сайта
+@import "./blocks/footer.scss"; // подвал сайта
+@import "./blocks/social.scss"; // социальные сети
+@import "./blocks/navigation-topic.scss"; // навигация в подвале
+@import "./blocks/contacts.scss"; // контакты в подвале

@@ -1,0 +1,94 @@
+//
+.footer {
+  padding-top: 22px;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content min-content;
+  grid-template-areas:
+    "logo       social"
+    "navigation navigation"
+    "developer  developer";
+}
+
+.footer__logo {
+  grid-area: logo;
+}
+
+.footer__logo-description {
+  display: none;
+  margin: 0;
+  grid-area: description;
+}
+
+.footer__social {
+  grid-area: social;
+}
+
+.footer__navigation-list {
+  @include list-base;
+  grid-area: navigation;
+}
+
+.footer__navigation-list::before,
+.footer__navigation-item::after {
+  @include mobile {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 100vw;
+    height: 1px;
+    background-color: $base-color-2;
+    transform: translateX(-50%);
+  }
+}
+
+
+.footer__developer {
+  grid-area: developer;
+  padding: 0;
+  padding-top: 3px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.footer__developer-label {
+  @include font-info(12px, 16px);
+  color: $base-color-5;
+}
+
+.footer__developer-link {
+  @include font-info(12px, 16px);
+  position: relative;
+  text-decoration: none;
+  color: $base-color-5;
+  padding-right: 18px;
+
+  &:hover {
+    color: $base-color-1;
+  }
+
+  &:active {
+    color: $alternate-color-2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 13px;
+    height: 16px;
+    mask: url("../../icons/academy-logo-icon.svg") no-repeat center;
+    background-color: $base-color-5;
+  }
+
+  &:hover::after {
+    background-color: $base-color-1;
+  }
+
+  &:active::after {
+    background-color: $alternate-color-2;
+  }
+}
