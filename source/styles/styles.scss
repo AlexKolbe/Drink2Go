@@ -14,6 +14,20 @@
 @import "./blocks/header.scss"; // шапка сайта
 @import "./blocks/main-nav.scss"; // главное меню
 @import "./blocks/activites.scss"; // активность
+@import "./blocks/site-list.scss"; // ссылки на другие страницы
+//блок HERO
+@import "./blocks/hero.scss"; //ХЕРОблок
+@import "./blocks/advertisment.scss"; // ценники
+@import "./blocks/section-title.scss"; // тайтл выделенный
+// Преимущества
+@import "./blocks/advantages.scss";
+// Каталог
+@import "./blocks/form.scss"; // Форма
+@import "./blocks/catalog.scss"; // Каталог
+@import "./blocks/card.scss"; // Карточки товаров
+@import "./blocks/pagination.scss"; //Пагинация
+//Карта
+@import "./blocks/address.scss";
 //Подвал сайта
 @import "./blocks/footer.scss"; // подвал сайта
 @import "./blocks/social.scss"; // социальные сети
