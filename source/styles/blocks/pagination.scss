@@ -1,6 +1,14 @@
 //
 .pagination {
   padding-top: 44px;
+
+  @include tablet {
+    padding-top: 73px;
+  }
+
+  @include desktop {
+    padding-top: 61px;
+  }
 }
 
 .pagination__list {
@@ -9,6 +17,10 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
+
+  @include tablet {
+    justify-content: flex-end;
+  }
 }
 
 .pagination__link {
@@ -47,6 +59,13 @@
   background-image: url("../../icons/arrow-left-icon.svg");
 }
 
+.pagination__link-next,
+.pagination__link-previous {
+  @include tablet {
+    padding: 8px 20px;
+  }
+}
+
 .pagination__link--active {
   color: $base-color-3;
   font-weight: 600;
@@ -54,5 +73,13 @@
 }
 
 .pagination__link-button {
-  display: none;
+  @include mobile {
+    display: none;
+  }
+}
+
+.pagination__link-icon {
+  @include tablet {
+    display: none;
+  }
 }

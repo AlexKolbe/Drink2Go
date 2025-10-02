@@ -1,7 +1,16 @@
 //
 
 .form {
-  border: none;
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 30px;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .form__group {
@@ -11,7 +20,9 @@
 }
 
 .form__group--price {
-  border: none;
+  @include desktop {
+    margin-top: 16px;
+  }
 }
 
 .form__title {
@@ -25,6 +36,10 @@
   @include list-base;
   text-align: left;
   margin-bottom: 30px;
+
+  @include desktop {
+    margin-bottom: 20px;
+  }
 }
 
 .form__filter-items--manufacturer {
@@ -49,6 +64,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 8px 2px;
+
+  @include desktop {
+    margin-bottom: 21px;
+  }
 }
 
 .form__slider-input {
@@ -86,16 +105,38 @@
     color: $base-color-5;
     background: $background-color-1;
   }
+
+  @include tablet {
+    width: 87px;
+  }
+
+  @include desktop {
+    width: 134px;
+  }
 }
 
 .form__group--buttons {
   display: flex;
   gap: 20px;
   flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+
+  @include desktop {
+    justify-content: stretch;
+  }
 }
 
 .form__button {
   @include font-info(16px, 24px);
+
+  @include desktop {
+    width: 100%;
+  }
 }
 
 .form__radio-mark {
@@ -227,4 +268,12 @@
   border-width: 1px 0;
   border-radius: 0;
   box-shadow: none;
+
+  @include tablet {
+    margin-bottom: 31px;
+  }
+
+  @include desktop {
+    margin-bottom: 33px;
+  }
 }

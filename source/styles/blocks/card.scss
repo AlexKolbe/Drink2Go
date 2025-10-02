@@ -6,11 +6,19 @@
   background-color: $base-color-4;
   padding: 43px 20px 20px;
   border-radius: 4px;
+
+  @include tablet {
+    padding: 50px 30px 30px;
+  }
 }
 
 .card__image-link {
   text-align: center;
   margin-bottom: 19px;
+
+  @include tablet {
+    margin-bottom: 26px;
+  }
 }
 
 .card__title {
@@ -19,6 +27,11 @@
   margin-bottom: 4px;
 
   @include font-info(18px, 32px, 700);
+
+  @include tablet {
+    @include font-info(24px, 36px, 700);
+    margin-bottom: 9px;
+  }
 }
 
 .card__link {
@@ -30,6 +43,10 @@
 .card__description {
   margin: 0;
   margin-bottom: 16px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
 }
 
 .card__price-wrapper {

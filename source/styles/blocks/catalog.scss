@@ -4,10 +4,29 @@
   padding-bottom: 44px;
   padding-top: 49px;
   background-color: $background-color-1;
+
+  @include tablet {
+    padding-top: 79px;
+    padding-bottom: 87px;
+  }
+
+  @include desktop {
+    padding: 100px 47px 119px 33px;
+  }
 }
 
 .catalog__container {
-  border: none;
+  @include desktop {
+    grid-template-columns: 318px 1fr;
+    grid-template-areas:
+      "title       title       title"
+      "description description description"
+      "form        fiter       filter"
+      "form        cards       cards"
+      "form        pagination  pagination";
+    column-gap: 30px;
+    display: grid;
+  }
 }
 
 .catalog__title {
@@ -23,6 +42,14 @@
   padding: 0;
   text-align: center;
   margin-bottom: 20px;
+
+  @include tablet {
+    @include font-info(42px, 64px, 700);
+  }
+
+  @include desktop {
+    margin-bottom: 24px;
+  }
 }
 
 .catalog__form {
@@ -35,17 +62,32 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 3px;
+
+  @include mobile {
+    padding-left: 3px;
+  }
+
+  @include tablet {
+    justify-content: flex-end;
+  }
 }
 
 .catalog__sorting-title {
   @include font-info(16px, 24px, 600);
+
+  @include tablet {
+    margin-right: 11px;
+  }
 }
 
 .catalog__sorting-wrapper {
   position: relative;
   display: inline-block;
   padding: 9px;
+
+  @include tablet {
+    padding: 0;
+  }
 
   &::after {
     content: "";
@@ -57,6 +99,10 @@
     height: 10px;
     background: url("../../icons/arrow-down-icon.svg") no-repeat center;
     right: 19px;
+
+    @include tablet {
+      right: 10px;
+    }
   }
 
   &:focus-within::after {
@@ -88,8 +134,21 @@
   @include list-base;
   display: grid;
   grid-area: cards;
-  grid-template-rows: repeat(6, 420px);
-  gap: 20px;
+
+  @include mobile {
+    grid-template-rows: repeat(6, 420px);
+    gap: 20px;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding-top: 13px;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .catalog__navigation {

@@ -6,6 +6,10 @@
   align-items: center;
   justify-content: center;
   margin-top: auto;
+
+  @include desktop {
+    justify-content: left;
+  }
 }
 
 .advertisement__price-before {

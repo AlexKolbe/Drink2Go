@@ -11,25 +11,25 @@
 }
 
 @mixin desktop {
-  @media (min-width: variables.$view-port-desktop) {
+  @media (min-width: $view-port-desktop) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: variables.$view-port-tablet) {
+  @media (min-width: $view-port-tablet) {
     @content;
   }
 }
 
 @mixin mobile {
-  @media (max-width: calc(variables.$view-port-tablet - 1px)) {
+  @media (max-width: calc($view-port-tablet - 1px)) {
     @content;
   }
 }
 
 @mixin font-info($font-size, $line-height, $font-weight: 400) {
-  font-family: variables.$font-primary;
+  font-family: $font-primary;
   font-size: $font-size;
   line-height: $line-height;
   font-style: normal;

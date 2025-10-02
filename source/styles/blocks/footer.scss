@@ -1,6 +1,14 @@
 //
 .footer {
   padding-top: 22px;
+
+  @include tablet {
+    padding-top: 42px;
+  }
+
+  @include desktop {
+    padding-top: 35px;
+  }
 }
 
 .footer__container {
@@ -10,6 +18,15 @@
     "logo       social"
     "navigation navigation"
     "developer  developer";
+
+  @include desktop {
+    grid-template:
+      "logo navigation" 46px
+      "description navigation" min-content
+      "social navigation" 82px
+      "developer developer" min-content / max-content 1fr;
+    column-gap: 62px;
+  }
 }
 
 .footer__logo {
@@ -20,6 +37,10 @@
   display: none;
   margin: 0;
   grid-area: description;
+
+  @include desktop {
+    display: block;
+  }
 }
 
 .footer__social {
@@ -29,6 +50,12 @@
 .footer__navigation-list {
   @include list-base;
   grid-area: navigation;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
 }
 
 .footer__navigation-list::before,
@@ -52,6 +79,10 @@
   display: flex;
   justify-content: center;
   margin-bottom: 18px;
+
+  @include tablet {
+    margin-bottom: 28px;
+  }
 }
 
 .footer__developer-label {

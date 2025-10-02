@@ -8,12 +8,29 @@
 
 .hero__image {
   display: block;
+
+  @include desktop {
+    margin-left: 54px;
+  }
 }
 
 .hero__image-wrapper {
   display: block;
   grid-area: image;
-  margin-bottom: 10px;
+
+  @include mobile {
+    margin-bottom: 10px;
+  }
+
+  @include tablet {
+    padding-top: 20px;
+    order: 2;
+  }
+
+  @include desktop {
+    margin-bottom: 5px;
+    padding-top: 23px;
+  }
 }
 
 .hero__image-wrapper picture {
@@ -40,6 +57,40 @@
   &:nth-child(3n) {
     background-color: $background-color-4;
   }
+
+  @include tablet {
+    &:nth-child(1n) {
+      background-color: unset;
+      background-image: linear-gradient(0deg, transparent 188px, $background-color-2 188px);
+    }
+
+    &:nth-child(2n) {
+      background-color: unset;
+      background-image: linear-gradient(0deg, transparent 188px, $background-color-3 188px);
+    }
+
+    &:nth-child(3n) {
+      background-color: unset;
+      background-image: linear-gradient(0deg, transparent 188px, $background-color-4 188px);
+    }
+  }
+
+  @include desktop {
+    &:nth-child(1n) {
+      background-image: none;
+      background-color: $background-color-2;
+    }
+
+    &:nth-child(2n) {
+      background-image: none;
+      background-color: $background-color-3;
+    }
+
+    &:nth-child(3n) {
+      background-image: none;
+      background-color: $background-color-4;
+    }
+  }
 }
 
 .hero__item--active {
@@ -48,6 +99,13 @@
 
 .hero__content-wrapper {
   grid-area: content;
+
+  @include desktop {
+    text-align: left;
+    padding-bottom: 0;
+    padding-top: 9px;
+    display: block;
+  }
 }
 
 .hero__container {
@@ -56,10 +114,27 @@
   flex-direction: column;
   height: 100%;
   padding: 20px 20px 60px;
+
+  @include tablet {
+    padding: 60px 50px 0;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image content";
+    gap: 30px;
+    padding-top: 7px;
+    padding-bottom: 79px;
+  }
 }
 
 .hero__label {
   margin: 0;
+
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .hero__title {
@@ -67,11 +142,31 @@
   margin: 4px 0 10px;
   letter-spacing: 0.02em;
   text-align: center;
+
+  @include tablet {
+    @include font-info(56px, 80px, 700);
+    text-align: center;
+    padding-bottom: 6px;
+    margin-left: 1px;
+  }
+
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .hero__description {
   margin: 0 0 20px;
   text-align: center;
+
+  @include tablet {
+    @include font-info(20px, 32px);
+  }
+
+  @include desktop {
+    text-align: left;
+    margin-bottom: 40px;
+  }
 }
 
 .hero__slider-container {
@@ -92,19 +187,45 @@
 }
 
 .hero__page-button-icon {
-  margin-left: -2px;
+  @include mobile {
+    margin-left: -2px;
+  }
+}
+
+.hero__page-button--before {
+  @include tablet {
+    padding-bottom: 188px;
+  }
+
+  @include desktop {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
 }
 
 .hero__page-button--after {
   transform: rotate(180deg);
+
+  @include tablet {
+    padding-top: 193px;
+  }
+
+  @include desktop {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .hero__page-button--before .hero__page-button-icon {
-  margin-top: 2px;
+  @include mobile {
+    margin-top: 2px;
+  }
 }
 
 .hero__page-button--after .hero__page-button-icon {
-  margin-bottom: -2px;
+  @include mobile {
+    margin-bottom: -2px;
+  }
 }
 
 .hero__page-button {
@@ -112,6 +233,10 @@
   color: $base-color-1;
   border: none;
   width: 20px;
+
+  @include tablet {
+    width: 80px;
+  }
 
   &:hover:not(:disabled),
   &:focus:not(:disabled) {
@@ -135,6 +260,13 @@
   bottom: 60px;
   transform: translate(50%);
   z-index: 1;
+
+  @include desktop {
+    display: flex;
+    gap: 8px;
+    left: 43%;
+    transform: none;
+  }
 }
 
 .hero__pagination-item {
@@ -161,4 +293,8 @@
 
 .hero__make-order {
   @include font-info(16px, 24px, 400);
+
+  @include tablet {
+    @include font-info(16px, 24px, 400);
+  }
 }

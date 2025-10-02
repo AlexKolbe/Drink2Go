@@ -7,11 +7,33 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 600px;
+
+  @include desktop {
+    gap: 20px;
+  }
 }
 
 .site-list__item:first-child .site-list__link {
   border-top: 1px solid $base-color-2;
+
+  @include tablet {
+    height: 100%;
+  }
 }
+
+.site-list__item--active {
+  @include tablet {
+    border-bottom: 2px solid $base-color-1;
+    margin-top: -1px;
+  }
+}
+
+.site-list__item--active .site-list__link {
+  @include tablet {
+    color: $base-color-1;
+  }
+}
+
 
 .site-list__link {
   @include font-info(12px, 16px, 500);
@@ -25,4 +47,9 @@
   color: $base-color-3;
   padding: 20px 20px 21px;
   border-bottom: 1px solid $base-color-2;
+
+  @include tablet {
+    padding: 31px 17px 31px 23px;
+    border-bottom: none;
+  }
 }

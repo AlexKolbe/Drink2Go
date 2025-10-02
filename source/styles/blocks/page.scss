@@ -19,4 +19,8 @@
   max-width: $view-port-desktop;
   margin: 0 auto;
   padding: 0 20px;
+
+  @include desktop {
+    padding: 0 40px;
+  }
 }
