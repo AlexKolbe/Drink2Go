@@ -39,6 +39,14 @@
   }
 }
 
+.pagination__link-next {
+  background-image: url("../../icons/arrow-right-icon.svg");
+}
+
+.pagination__link-previous {
+  background-image: url("../../icons/arrow-left-icon.svg");
+}
+
 .pagination__link--active {
   color: $base-color-3;
   font-weight: 600;
