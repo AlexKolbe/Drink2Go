@@ -1,1 +1,97 @@
 //
+
+.catalog {
+  padding-bottom: 44px;
+  padding-top: 49px;
+  background-color: $background-color-1;
+}
+
+.catalog__container {
+  border: none;
+}
+
+.catalog__title {
+  grid-area: title;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.catalog__description {
+  @include font-info(24px, 36px, 700);
+  grid-area: description;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.catalog__form {
+  grid-area: form;
+  margin-bottom: 29px;
+}
+
+.catalog__filters {
+  grid-area: filter;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 3px;
+}
+
+.catalog__sorting-title {
+  @include font-info(16px, 24px, 600);
+}
+
+.catalog__sorting-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 9px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 10px;
+    height: 10px;
+    background: url("../../icons/arrow-down-icon.svg") no-repeat center;
+    right: 19px;
+  }
+
+  &:focus-within::after {
+    background: url("../../icons/stack.svg#arrow-up-icon") no-repeat center;
+  }
+
+  &:focus-within .catalog__sorting {
+    background-color: $base-color-4;
+  }
+}
+
+.catalog__sorting {
+  @include font-info(16px, 24px, 600);
+  background-color: inherit;
+  appearance: none;
+  border: 0;
+  color: $base-color-1;
+  border-radius: 4px;
+  padding: 4px 30px 4px 10;
+  min-width: 165px;
+  min-height: 32px;
+
+  &:hover {
+    background-color: $base-color-2;
+  }
+}
+
+.catalog__list {
+  @include list-base;
+  display: grid;
+  grid-area: cards;
+  grid-template-rows: repeat(6, 420px);
+  gap: 20px;
+}
+
+.catalog__navigation {
+  grid-area: pagination;
+}

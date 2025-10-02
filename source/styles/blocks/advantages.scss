@@ -1,1 +1,67 @@
 //
+
+.advantages {
+  padding: 40px 0 60px;
+}
+
+.advantages__title {
+  margin-bottom: 5px;
+}
+
+.advantages__description {
+  @include font-info(24px, 36px, 700);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.advantages__list {
+  @include list-base;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.advantages__item {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 56px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}
+
+.advantages__item--speed::before {
+  background: url("../../icons/speed-icon.svg") no-repeat center / cover;
+}
+
+.advantages__item--convenience::before {
+  background: url("../../icons/sheld-icon.svg") no-repeat center / cover;
+}
+
+.advantages__item--cheerfulness::before {
+  background: url("../../icons/energy-icon.svg") no-repeat center / cover;
+}
+
+.advantages__item--ecology::before {
+  background: url("../../icons/leaf-icon.svg") no-repeat center / cover;
+}
+
+.advantages__item-title {
+  @include font-info(18px, 32px, 700);
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.advantages__item-description {
+  margin: 0;
+  text-align: center;
+}

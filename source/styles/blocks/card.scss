@@ -1,1 +1,58 @@
 //
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $base-color-4;
+  padding: 43px 20px 20px;
+  border-radius: 4px;
+}
+
+.card__image-link {
+  text-align: center;
+  margin-bottom: 19px;
+}
+
+.card__title {
+  align-self: flex-start;
+  margin: 0;
+  margin-bottom: 4px;
+
+  @include font-info(18px, 32px, 700);
+}
+
+.card__link {
+  display: block;
+  text-decoration: none;
+  color: $base-color-3;
+}
+
+.card__description {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.card__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__price {
+  @include font-info(20px, 32px, 600);
+  margin-left: -2px;
+}
+
+.card__button {
+  position: relative;
+  padding-left: 46px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 20px;
+    width: 20px;
+    height: 16px;
+    background: url("../../icons/cart-icon.svg") no-repeat center;
+  }
+}

@@ -1,1 +1,230 @@
 //
+
+.form {
+  border: none;
+}
+
+.form__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__group--price {
+  border: none;
+}
+
+.form__title {
+  @include font-info(16px, 24px, 600);
+  margin-bottom: 20px;
+  margin-left: -2px;
+}
+
+.form__filter-items {
+  @include font-info(16px, 24px);
+  @include list-base;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.form__filter-items--manufacturer {
+  margin-bottom: 29px;
+}
+
+.form__filter-item {
+  margin-bottom: 20px;
+}
+
+.form__filter-input-label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.form__slider-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 31px;
+  background-image: linear-gradient(to top, $base-color-5, $base-color-5);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 8px 2px;
+}
+
+.form__slider-input {
+  @include font-info(16px, 24px, 500);
+  height: 40px;
+  width: 118px;
+  text-align: center;
+  border: 2px solid $alternate-color-1;
+  padding: 8px 10px;
+  border-radius: 4px;
+  appearance: textfield;
+  background-color: $base-color-4;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &::placeholder {
+    color: $base-color-5;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus,
+  &:hover {
+    border-color: $alternate-color-2;
+  }
+
+  &:disabled {
+    border: 2px solid $alternate-color-4;
+    color: $base-color-5;
+    background: $background-color-1;
+  }
+}
+
+.form__group--buttons {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.form__button {
+  @include font-info(16px, 24px);
+}
+
+.form__radio-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $base-color-5;
+  background-color: $base-color-4;
+  border-radius: 50%;
+  padding: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-color: $base-color-1;
+    border-radius: 50%;
+    display: none;
+  }
+}
+
+.form__control-input {
+  &:checked ~ .form__radio-mark {
+    border: 2px solid $base-color-1;
+  }
+
+  &:checked ~ .form__radio-mark::before {
+    display: block;
+  }
+
+  &:checked:disabled ~ .form__radio-mark::before {
+    background-color: $alternate-color-4;
+    display: block;
+  }
+
+  &:focus:not(:disabled):not(:checked) ~ .form__radio-mark,
+  &:hover:not(:disabled):not(:checked) ~ .form__radio-mark {
+    border: 2px solid $alternate-color-1;
+  }
+
+  &:focus:not(:disabled):not(:checked) ~ .form__radio-mark::before,
+  &:hover:not(:disabled):not(:checked) ~ .form__radio-mark::before {
+    background-color: $alternate-color-3;
+    display: block;
+  }
+
+  &:disabled ~ .form__radio-mark {
+    border: 2px solid $alternate-color-4;
+  }
+
+  &:focus:not(:disabled):not(:checked) ~ .form__check-mark,
+  &:hover:not(:disabled):not(:checked) ~ .form__check-mark {
+    border: 2px solid $alternate-color-1;
+    background-color: $alternate-color-3;
+  }
+
+  &:checked ~ .form__check-mark {
+    background-color: $base-color-1;
+  }
+
+  &:checked ~ .form__check-mark::before {
+    left: 71%;
+  }
+
+  &:checked:disabled ~ .form__check-mark::before {
+    background-color: $base-color-5;
+  }
+
+  &:disabled ~ .form__check-mark {
+    background-color: $alternate-color-4;
+  }
+
+  &:disabled ~ .form__text {
+    color: $base-color-5;
+  }
+}
+
+.form__check-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 24px;
+  background-color: $base-color-5;
+  border-radius: 12px;
+  padding: 0;
+}
+
+.form__check-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: $base-color-4;
+  border-radius: 50%;
+}
+
+.form__check-mark ~ .form__text {
+  padding-left: 52px;
+}
+
+.form__radio-mark ~ .form__text {
+  padding-left: 34px;
+}
+
+.form__slider-wrapper {
+  border: none;
+  align-content: start;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+
+.form__slider {
+  height: 0;
+  margin: 10px 0 35px;
+  padding: 0 12px;
+  border: 1px solid $alternate-color-4;
+  border-width: 1px 0;
+  border-radius: 0;
+  box-shadow: none;
+}
