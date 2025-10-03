@@ -1,0 +1,66 @@
+//
+.no-ui-slider {
+  .no-ui-slider__connects {
+    overflow: visible;
+  }
+
+  .no-ui-slider__connect {
+    top: -2px;
+    height: 4px;
+    background-color: $alternate-color-1;
+  }
+
+  .no-ui-slider__handle {
+    top: -12px;
+    right: -12px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid $alternate-color-1;
+    border-radius: 50%;
+    background-color: $base-color-4;
+    box-shadow: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .no-ui-slider__touch-area {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: $base-color-4;
+    background-clip: content-box;
+  }
+
+  .no-ui-slider__handle:focus .no-ui-slider__touch-area,
+  .no-ui-slider__handle:hover .no-ui-slider__touch-area {
+    background-color: $alternate-color-3;
+  }
+
+  .no-ui-slider__handle:focus {
+    outline: none;
+  }
+
+  .no-ui-slider__handle:hover {
+    cursor: pointer;
+  }
+
+  .no-ui-slider__handle:active .no-ui-slider__touch-area {
+    background-color: $base-color-1;
+  }
+}
+
+.no-ui-slider[disabled] {
+  .no-ui-slider__connect {
+    background-color: $base-color-5;
+  }
+
+  .no-ui-slider__handle {
+    border-color: $base-color-5;
+    background-color: $background-color-1;
+    pointer-events: none;
+  }
+}
