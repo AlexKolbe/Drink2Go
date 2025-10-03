@@ -15,6 +15,10 @@
   cursor: pointer;
   margin-right: auto;
 
+  @include tablet {
+    margin-right: 0;
+  }
+
   @include desktop {
     margin-right: 20px;
   }

@@ -76,6 +76,7 @@
 
   @include tablet {
     padding-left: 72px;
+    align-items: flex-start;
 
     &::before {
       content: "";
@@ -139,6 +140,7 @@
 
   @include tablet {
     @include font-info(16px, 24px);
+    text-align: left;
   }
 
   @include desktop {

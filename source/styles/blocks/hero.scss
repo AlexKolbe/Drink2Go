@@ -220,11 +220,21 @@
   @include mobile {
     margin-top: 2px;
   }
+
+  @include tablet {
+    width: 20px;
+    height: 30px;
+  }
 }
 
 .hero__page-button--after .hero__page-button-icon {
   @include mobile {
     margin-bottom: -2px;
+  }
+
+  @include tablet {
+    width: 20px;
+    height: 30px;
   }
 }
 
