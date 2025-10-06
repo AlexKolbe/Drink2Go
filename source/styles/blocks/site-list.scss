@@ -13,8 +13,12 @@
   }
 }
 
-.site-list__item:first-child .site-list__link {
-  border-top: 1px solid $base-color-2;
+.site-list__item {
+  @include mobile {
+    &:first-child .site-list__link {
+      border-top: 1px solid $base-color-2;
+    }
+  }
 
   @include tablet {
     height: 100%;
@@ -45,8 +49,11 @@
   display: block;
   background-color: $base-color-4;
   color: $base-color-3;
-  padding: 20px 20px 21px;
-  border-bottom: 1px solid $base-color-2;
+
+  @include mobile {
+    padding: 20px 20px 21px;
+    border-bottom: 1px solid $base-color-2;
+  }
 
   @include tablet {
     padding: 31px 17px 31px 23px;

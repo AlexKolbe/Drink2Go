@@ -13,7 +13,10 @@
 .header__logo {
   text-decoration: none;
   cursor: pointer;
-  margin-right: auto;
+
+  @include mobile {
+    margin-right: auto;
+  }
 
   @include tablet {
     margin-right: 0;

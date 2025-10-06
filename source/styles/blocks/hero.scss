@@ -132,10 +132,13 @@
 .hero__label {
   margin: 0;
 
-  @include desktop {
-    text-align: left;
+  &.section-title {
+    @include desktop {
+      text-align: start;
+    }
   }
 }
+
 
 .hero__title {
   @include font-info(36px, 48px, 700);

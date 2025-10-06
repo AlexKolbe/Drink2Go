@@ -17,6 +17,10 @@
   height: 50px;
   transform: translate(-50%, -50%);
   background: url("../../icons/map-pin-icon.svg") no-repeat center;
+
+  @include desktop {
+    left: 51%;
+  }
 }
 
 .address__map {
