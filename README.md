@@ -1,5 +1,5 @@
 Верстальщик: Александр Колесников :)
-[Drink2Go](https://up.htmlacademy.ru/assets/intensives/production-frontender/23/grading/projects/drink2go/image.jpg)
+![Drink2Go](https://up.htmlacademy.ru/assets/intensives/production-frontender/23/grading/projects/drink2go/image.jpg)
 [Ссылка на макет](https://www.figma.com/design/4JI3v3kHED8sDS85oOX1ho/Drink2Go.-%D0%93%D1%80%D0%B5%D0%B9%D0%B4%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%A4%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA(20)?node-id=86-11851&t=yWOMPv4I6WhCrHSI-1)
 
 # Сборка для HTML-курсов в HTML Academy
