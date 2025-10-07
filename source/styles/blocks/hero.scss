@@ -306,6 +306,7 @@
 
 .hero__make-order {
   @include font-info(16px, 24px, 400);
+  z-index: 1;
 
   @include tablet {
     @include font-info(16px, 24px, 400);
